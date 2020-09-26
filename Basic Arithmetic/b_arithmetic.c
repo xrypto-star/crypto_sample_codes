@@ -1,7 +1,7 @@
-/* Program to implement pure arithmetic operations
+/* Program to implement basic arithmetic operations
 */
 #include <stdio.h>
-#include "/home/iiita/MIRACL/miracl.h"   /* include MIRACL system */
+#include "miracl.h"   /* include MIRACL system */
 
 void main(){
 

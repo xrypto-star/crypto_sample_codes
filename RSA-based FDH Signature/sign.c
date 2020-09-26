@@ -1,5 +1,7 @@
+/*Program to implement signing algorithm of RSA-based FDH signature */
+
 #include <stdio.h>
-#include "/home/iiita/MIRACL/miracl.h"   /* include MIRACL system */
+#include "miracl.h"   /* include MIRACL system */
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>

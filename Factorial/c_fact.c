@@ -1,5 +1,5 @@
 /*
-* Program to calculate factorials in C.
+* Program to calculate factorials in generic C.
 */
 #include <stdio.h>
 int main() {
