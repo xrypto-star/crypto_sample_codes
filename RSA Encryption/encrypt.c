@@ -50,7 +50,7 @@ int main()
     fclose(ifile);
 
     
-    /* find key length in characters (ASCII). Reset it as required!. Could be completely automated. */
+    /* find key length in characters (ASCII). Reset it as required and to prevent loss of plaintext! E,g., If N is of 23 bits, set klen = 3, N is 21 bits, set klen = 2, etc., Could be completely automated. */
     klen = logb2(N)/7;/* - 1;*/    
     printf("Key length = %d\n",klen);
 
