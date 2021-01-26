@@ -1,7 +1,7 @@
 /*Program to implement decryption algorithm of RSA */
 
 #include <stdio.h>
-#include "miracl.h"   /* include MIRACL system */
+#include "/home/iiita/miracl/miracl/miracl.h"   /* include MIRACL system */
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>

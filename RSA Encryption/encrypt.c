@@ -1,22 +1,8 @@
-/*Program to implement encryption algorithm of RSA */
-
 #include <stdio.h>
-#include "miracl.h"   /* include MIRACL system */
+#include "/home/iiita/miracl/miracl/miracl.h"   /* include MIRACL system */
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-
-void strip(char *name)
-{ 
-    /* strip off filename extension */
-    int i;
-    for (i=0; name[i]!='\0'; i++)
-    {
-        if (name[i]!='.') continue;
-        name[i]='\0';
-        break;
-    }
-}
 
 miracl *mip;
 
@@ -48,10 +34,10 @@ int main()
     cinnum(N,ifile);
     cinnum(e,ifile);
     fclose(ifile);
-
+                                       /*    m^(e) mod       */ 
     
-    /* find key length in characters (ASCII). Reset it as required and to prevent loss of plaintext! E,g., If N is of 23 bits, set klen = 3, N is 21 bits, set klen = 2, etc., Could be completely automated. */
-    klen = logb2(N)/7;/* - 1;*/    
+    /* find key length in characters (ASCII). Reset it as required!. Could be completely automated. */
+    klen = logb2(N)/7 - 1;    
     printf("Key length = %d\n",klen);
 
     
@@ -79,6 +65,7 @@ int main()
 
         mip->IOBASE=128;
         cinstr(m,buff);
+        /*cotnum(m,stdout);*/
         powmod(m,e,N,c);
         mip->IOBASE=16;
         /*cotnum(c,stdout);*/

@@ -1,7 +1,7 @@
 /*Program to implement Key generation algorithm of RSA Encryption */
 
 #include <stdio.h>
-#include "miracl.h"   /* include MIRACL system */
+#include "/home/iiita/miracl/miracl/miracl.h"   /* include MIRACL system */
 #define NP 2            /* use two primes - could be more */
 #define PRIME_BITS 10
 
